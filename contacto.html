@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Mi espacio web</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="contenedor cabecera">
+        <div>
+            <p class="etiqueta">MI ESPACIO WEB</p>
+            <h1>Contacto</h1>
+            <p>Envíanos tus comentarios.</p>
+        </div>
+        <a class="boton boton-claro" href="index.html">Volver al inicio</a>
+    </div>
+</header>
+
+<main class="contenedor" style="padding-top: 30px; padding-bottom: 40px;">
+    <section class="tarjeta">
+        <h2>Formulario de contacto</h2>
+
+        <form id="formPrincipal">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="tema">Motivo del mensaje</label>
+            <select id="tema" name="tema" required>
+                <option value="">Selecciona una opción</option>
+                <option>Consulta</option>
+                <option>Sugerencia</option>
+                <option>Otro</option>
+            </select>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <button class="boton" type="submit">Enviar mensaje</button>
+            <p id="respuesta" aria-live="polite"></p>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>Mi espacio web</p>
+    <p>© <span id="anio"></span></p>
+    <a href="index.html">Regresar al inicio</a>
+</footer>
+
+</body>
+</html>

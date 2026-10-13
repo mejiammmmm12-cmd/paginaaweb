@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi espacio web</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/script.js" defer></script>
+
+    <style>
+        :root {
+            --rosa: #FF69B4;
+            --rosa-claro: #FFF0F5;
+            --morado: #800080;
+            --morado-claro: #E6D5FF;
+            --blanco: #FFFFFF;
+            --texto: #4B245A;
+        }
+
+        body {
+            background-color: var(--rosa-claro);
+            color: var(--texto);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--rosa), var(--morado));
+            color: var(--blanco);
+            padding: 25px 0;
+        }
+
+        header h1, header p {
+            color: var(--blanco);
+        }
+
+        .etiqueta {
+            color: var(--rosa);
+            font-weight: bold;
+        }
+
+        header .etiqueta {
+            color: var(--blanco);
+        }
+
+        .navegacion a {
+            color: var(--blanco);
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        .navegacion a:hover {
+            color: #FFD6EB;
+        }
+
+        .tarjeta {
+            background-color: var(--blanco);
+            border: 1px solid var(--morado-claro);
+            border-radius: 15px;
+            padding: 22px;
+            margin-bottom: 22px;
+            box-shadow: 0 4px 12px rgba(128, 0, 128, 0.12);
+        }
+
+        h1, h2, h3 {
+            color: var(--morado);
+        }
+
+        .boton {
+            display: inline-block;
+            background-color: var(--rosa);
+            color: var(--blanco);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .boton:hover {
+            background-color: var(--morado);
+            color: var(--blanco);
+        }
+
+        .boton-claro {
+            background-color: var(--blanco);
+            color: var(--morado);
+        }
+
+        .mini-tarjeta {
+            background-color: var(--rosa-claro);
+            border: 1px solid var(--morado-claro);
+            border-radius: 12px;
+            padding: 18px;
+        }
+
+        .simbolo {
+            background-color: var(--morado);
+            color: var(--blanco);
+            display: inline-block;
+            padding: 10px 14px;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+
+        a {
+            color: var(--morado);
+        }
+
+        blockquote {
+            border-left: 5px solid var(--rosa);
+            background-color: var(--rosa-claro);
+            padding: 15px;
+            margin-left: 0;
+        }
+
+        input, select, textarea {
+            border: 1px solid #D8A4D8;
+            border-radius: 8px;
+            padding: 10px;
+            max-width: 100%;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: 2px solid var(--rosa);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: var(--morado);
+            color: var(--blanco);
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid var(--morado-claro);
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--rosa-claro);
+        }
+
+        aside details {
+            background-color: var(--rosa-claro);
+            padding: 12px;
+            border-radius: 10px;
+        }
+
+        .imagen-principal {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        footer {
+            background: linear-gradient(135deg, var(--morado), var(--rosa));
+            color: var(--blanco);
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 25px;
+        }
+
+        footer p, footer a {
+            color: var(--blanco);
+        }
+
+        footer a:hover {
+            color: #FFD6EB;
+        }
+
+        .institucion {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .navegacion a {
+                display: inline-block;
+                margin: 7px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header id="inicio">
+    <div class="contenedor cabecera">
+        <div>
+            <p class="etiqueta">BIENVENIDO A MI PÁGINA</p>
+            <h1>Mi espacio web</h1>
+            <p id="saludo">Un lugar para aprender y descubrir.</p>
+        </div>
+
+        <button class="boton boton-claro" id="cambiarTema" type="button">
+            Cambiar tema
+        </button>
+    </div>
+
+    <nav class="contenedor navegacion">
+        <a href="#inicio">Inicio</a>
+        <a href="#acerca">Acerca de</a>
+        <a href="#secciones">Secciones</a>
+        <a href="#informacion">Información</a>
+        <a href="#formulario">Formulario</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</header>
+
+<div class="contenedor distribucion">
+<main>
+
+    <section class="tarjeta portada">
+        <p class="etiqueta">DISEÑO MODERNO</p>
+        <h2>Explora un mundo de ideas</h2>
+        <p>
+            Bienvenido a este espacio creado para compartir información,
+            descubrir nuevas ideas y aprender sobre tecnología.
+        </p>
+
+        <img
+            class="imagen-principal"
+            src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=80"
+            alt="Paisaje natural con montañas y lago azul"
+        >
+
+        <a class="boton" href="#acerca">Descubrir más</a>
+    </section>
+
+    <section class="tarjeta" id="acerca">
+        <h2>Acerca de esta página</h2>
+        <p>
+            Esta página web fue creada utilizando HTML, CSS y JavaScript.
+            Su diseño utiliza colores rosa y morado para ofrecer
+            una apariencia limpia, moderna y agradable.
+        </p>
+        <p>
+            El objetivo es organizar la información de forma sencilla
+            y practicar los fundamentos del desarrollo web.
+        </p>
+
+        <blockquote>
+            Cada nuevo conocimiento es una oportunidad para crecer.
+        </blockquote>
+
+        <p>
+            Aprende más en
+            <a href="https://developer.mozilla.org/es/"
+               target="_blank" rel="noopener noreferrer">
+                MDN Web Docs
+            </a>.
+        </p>
+    </section>
+
+    <section class="tarjeta" id="secciones">
+        <h2>Explora nuestras secciones</h2>
+
+        <div class="tarjetas">
+            <article class="mini-tarjeta">
+                <div class="simbolo">01</div>
+                <h3>Aprendizaje</h3>
+                <p>Descubre información y desarrolla nuevas habilidades.</p>
+            </article>
+
+            <article class="mini-tarjeta">
+                <div class="simbolo">02</div>
+                <h3>Creatividad</h3>
+                <p>Expresa tus ideas y conviértelas en proyectos.</p>
+            </article>
+
+            <article class="mini-tarjeta">
+                <div class="simbolo">03</div>
+                <h3>Tecnología</h3>
+                <p>Conoce herramientas digitales y programación.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="tarjeta" id="informacion">
+        <h2>Información general</h2>
+
+        <h3>¿Qué encontrarás aquí?</h3>
+        <ul>
+            <li>Información organizada.</li>
+            <li>Una imagen de paisaje.</li>
+            <li>Enlaces a recursos educativos.</li>
+            <li>Un formulario interactivo.</li>
+        </ul>
+
+        <h3>Cómo se desarrolla una página web</h3>
+        <ol>
+            <li>Crear la estructura con HTML.</li>
+            <li>Diseñar la apariencia con CSS.</li>
+            <li>Añadir interactividad con JavaScript.</li>
+        </ol>
+
+        <h3>Conceptos básicos</h3>
+        <dl>
+            <dt><strong>HTML</strong></dt>
+            <dd>Organiza la estructura y el contenido.</dd>
+
+            <dt><strong>CSS</strong></dt>
+            <dd>Define colores, tamaños y distribución.</dd>
+
+            <dt><strong>JavaScript</strong></dt>
+            <dd>Permite añadir funciones interactivas.</dd>
+        </dl>
+
+        <div class="tabla-contenedor">
+            <table>
+                <caption>Tecnologías utilizadas</caption>
+                <thead>
+                    <tr>
+                        <th>Tecnología</th>
+                        <th>Función</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Estructura</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>Diseño visual</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Interactividad</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="tarjeta" id="formulario">
+        <h2>Formulario</h2>
+        <p>Completa los campos para probar el formulario.</p>
+
+        <form id="formPrincipal">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre"
+                   placeholder="Escribe tu nombre" required>
+
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo"
+                   placeholder="correo@ejemplo.com" required>
+
+            <label for="edad">Edad</label>
+            <input type="number" id="edad" name="edad"
+                   min="1" max="120">
+
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono"
+                   placeholder="Tu teléfono">
+
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" name="fecha">
+
+            <label for="tema">Tema de interés</label>
+            <select id="tema" name="tema" required>
+                <option value="">Selecciona una opción</option>
+                <option>Aprendizaje</option>
+                <option>Creatividad</option>
+                <option>Tecnología</option>
+                <option>Otro</option>
+            </select>
+
+            <p>¿Te gustó esta página?</p>
+
+            <label class="opcion">
+                <input type="radio" name="opinion" value="Sí" required>
+                Sí
+            </label>
+
+            <label class="opcion">
+                <input type="radio" name="opinion" value="No">
+                No
+            </label>
+
+            <label class="opcion">
+                <input type="checkbox" name="confirmacion" required>
+                Confirmo que mis respuestas son correctas.
+            </label>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4"
+                      placeholder="Escribe tu mensaje..."></textarea>
+
+            <button class="boton" type="submit">Enviar formulario</button>
+            <p id="respuesta" aria-live="polite"></p>
+        </form>
+    </section>
+
+</main>
+
+<aside class="tarjeta lateral">
+    <h2>Información útil</h2>
+    <p>Explora las secciones y conoce las funciones de esta página.</p>
+
+    <h3>Accesos rápidos</h3>
+    <ul>
+        <li><a href="#acerca">Acerca de</a></li>
+        <li><a href="#secciones">Secciones</a></li>
+        <li><a href="#informacion">Información</a></li>
+    </ul>
+
+    <details>
+        <summary>¿Cómo se creó?</summary>
+        <p>Se utilizaron HTML, CSS y JavaScript en Sublime Text.</p>
+    </details>
+
+    <p><a href="contacto.html">Visitar contacto →</a></p>
+</aside>
+</div>
+
+<footer>
+    <p>Mi espacio web | Proyecto escolar</p>
+    <p>© <span id="anio"></span> Todos los derechos reservados.</p>
+    <p class="institucion">CETAC 22</p>
+    <a href="#inicio">Volver al inicio ↑</a>
+</footer>
+
+</body>
+</html>
